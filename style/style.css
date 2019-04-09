@@ -1,28 +1,51 @@
-body{
+body {
+  margin: auto 0;
   font-family: 'Muli', sans-serif;
-  color:rgba(0,0,0,0.7);
-  text-align:center;
-  text-transform:uppercase;
-  letter-spacing:0.5em;
-  top:80%;
+  color: rgba(0, 0, 0, 0.7);
   background: linear-gradient(to right, #dbdbdb, #f7efef);
 }
 
-h1{
+nav {}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.main-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  background-color: #252525;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+cover{
+  display: flex;
+
+}
+li {
+  padding: 20px;
+}
+
+h1 {
   font: 600 3.5em 'Muli', sans-serif;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5em;
-  width:100%;
-
+  width: 100%;
 }
 
-h3{
+h3 {
   font: 900 1em 'Muli', sans-serif;
-  color:rgba(0,0,0,0.5);
-  text-align:center;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
   text-transform: none;
   letter-spacing: 0.01em;
-
 }
