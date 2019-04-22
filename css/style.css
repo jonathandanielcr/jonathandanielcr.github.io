@@ -169,16 +169,20 @@ body {
   /* text-transform: uppercase; */
 }
 
+.name + p{
+  font-size: 1.25em;
+  color: #fff;
+}
+
 .section-1 {
   margin-top: 0;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border: 1px solid #37474f;
   background-color: #37474f;
-  height: 40vh;
+  height: auto;
   min-height: 300px;
 }
 
@@ -189,6 +193,18 @@ body {
   color: #fff;
   margin: 100px 25%;
   letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .section1-children {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1em;
+    text-align: center;
+    color: #fff;
+    margin: 100px 25%;
+    letter-spacing: 5px;
+  }
+
 }
 
 .content {
@@ -225,7 +241,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
   margin: auto auto;
   border-top: 1px dotted #053F5E;
   border-bottom: 1px dotted #053F5E;
