@@ -165,7 +165,7 @@ body {
   color: #fff;
   font-size: 3rem;
   z-index: 11;
-  letter-spacing: 20px;
+  letter-spacing: 15px;
   /* text-transform: uppercase; */
 }
 
@@ -233,6 +233,13 @@ h3 {
   margin-top: 40px;
   color: #053F5E;
 }
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-top: 40px;
+  color: #053F5E;
+}
 
 .content-section {
   display: flex;
@@ -244,12 +251,16 @@ h3 {
   padding: 15px;
   border-top: 1px dotted #053F5E;
   /* border-bottom: 1px dotted #053F5E; */
-  width: 70%;
+  width: 80%;
   /* margin: 15px auto; */
 }
 
+.education{
+  justify-content: space-around;
+  width: 40%;
+  
 
-
+}
 .skills-logo {
   display: flex;
   flex-direction: column;
@@ -273,7 +284,6 @@ h3 {
   margin-right: auto;
   justify-self: center;
 }
-
 
 .skill-name {
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -303,9 +313,9 @@ h3 {
   font-size: 1.5em;
 }
 
-.profile-data a{
-  color:#3f51b5;
-  color:#053f5e;
+.profile-data a {
+  color: #3f51b5;
+  color: #053f5e;
   text-decoration: none;
 }
 
@@ -316,15 +326,38 @@ h3 {
   border-radius: 50%;
 }
 
-.profile-data strong{
+.profile-data strong {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
-  color:#053f5e;
-  color:#3f51b5;
+  color: #053f5e;
+  color: #3f51b5;
   margin-right: 10px;
+
 }
 
+.profile-data li{
+  list-style: none;
+  margin: 0 auto;
+  /* margin-left: 0; */
+}
+.profile-data ul{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.title{
+  font-family: 'Fira Mono', sans-serif;
+  font-size: 1.5em;
+  margin-right: 20px;
+
+}
+.school{
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
 main {
   grid-column: 1 / 13;
   grid-row: 1 / 10;
