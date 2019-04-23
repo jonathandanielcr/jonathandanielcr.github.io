@@ -20,6 +20,7 @@ body {
   z-index: 15;
 }
 
+
 .nav-a>i {
   margin-right: 15px;
 }
@@ -221,6 +222,7 @@ body {
   background: #fff;
   /* padding: 15px; */
 }
+
 
 .skills {
   width: 100%;
