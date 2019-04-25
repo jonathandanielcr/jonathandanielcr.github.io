@@ -317,15 +317,22 @@ h4 {
 .my-picture {
   z-index: 10;
   flex-grow: 2;
-  margin: 0 20px;
+  margin: 0 50px;
   align-self: center;
+  display: grid;
   /* width: auto; */
   /* margin: auto; */
 }
 
+@media only screen and (max-width:600px) {
+  .my-picture {
+    margin: auto;
+  }
+}
+
 .my-picture img {
   width: 250px;
-  /* margin-right: auto; */
+  margin: auto;
 }
 
 .profile-data {
@@ -334,6 +341,7 @@ h4 {
   margin: 0 20px;
   font-family: 'Fira Mono', sans-serif;
   font-size: 1.5em;
+  z-index: 5;
 }
 
 @media only screen and (max-width:600px) {
@@ -353,9 +361,9 @@ h4 {
 }
 
 .avatar {
-  vertical-align: middle;
+  /* vertical-align: middle; */
   /* width: 50px; */
-  height: auto;
+  /* height: auto; */
   border-radius: 50%;
 }
 
@@ -381,6 +389,7 @@ h4 {
 }
 
 .education-title {
+  margin: 0;
   font-size: 1.15em;
 }
 
@@ -414,7 +423,7 @@ h4 {
 
 .paper::before {
   content: "";
-  z-index: -1;
+  z-index: 1;
   margin: 0 1px;
   width: auto;
   height: 10px;
@@ -430,9 +439,10 @@ h4 {
   position: absolute;
   width: 0px;
   top: 0;
-  left: 10%;
+  left: 7%;
   bottom: 0;
   border-left: 1px solid #F8D3D3;
+  z-index: 1;
 }
 
 main {
