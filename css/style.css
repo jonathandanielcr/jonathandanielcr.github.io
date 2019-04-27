@@ -395,6 +395,7 @@ h4 {
 .education-title {
   margin: 0;
   font-size: 1.15em;
+  font-weight: bold;
 }
 
 .title {
@@ -409,6 +410,81 @@ h4 {
   text-transform: uppercase;
 }
 
+.experience-flex {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.grid-content {
+  display: grid;
+  margin-top: 25px;
+}
+
+.experience-grid {
+  grid-template-areas: "ename jobt"
+    "ename jobp";
+  /* grid-template-areas: "head head"
+                       "nav  main"
+                       "nav  foot"; */
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+
+
+
+div>.enterprise-name {
+  grid-area: ename;
+  /* text-transform: uppercase; */
+  border-right: 4px dotted #000;
+  /* text-align: center; */
+  /* margin: 10px; */
+}
+
+.enterprise-name a {
+  font-family: 'Fira Mono', sans-serif;
+  font-size: 1em;
+}
+
+div>.job-title {
+  grid-area: jobt;
+  font-size: 1em;
+  margin: 0 35px;
+}
+
+div>.job-period {
+  grid-area: jobp;
+  margin: 0 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  .experience-grid {
+    grid-template-areas: "ename"
+      "jobt"
+      "jobp";
+    /* grid-template-areas: "head head"
+                       "nav  main"
+                       "nav  foot"; */
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    align-items: flex-start;
+  }
+  div>.enterprise-name{
+    grid-area: ename;
+    border: none;
+    margin: 0;
+  }
+  div>.job-title {
+    grid-area: jobt;
+    font-size: 1em;
+    margin: 0;
+  }
+
+  div>.job-period {
+    grid-area: jobp;
+    margin: 0;
+  }
+}
 /* **********TAKEN********** */
 /* **********PAPER STYLE********** */
 .paper {
