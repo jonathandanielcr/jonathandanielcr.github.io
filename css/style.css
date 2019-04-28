@@ -143,6 +143,7 @@ body {
 #cover {
   background: url("../images/intro-min.jpg") no-repeat center top;
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -434,8 +435,6 @@ h4 {
   align-items: center;
 }
 
-
-
 div>.enterprise-name {
   grid-area: ename;
   /* text-transform: uppercase; */
@@ -472,11 +471,13 @@ div>.job-period {
     grid-auto-rows: auto;
     align-items: flex-start;
   }
-  div>.enterprise-name{
+
+  div>.enterprise-name {
     grid-area: ename;
     border: none;
     margin: 0;
   }
+
   div>.job-title {
     grid-area: jobt;
     font-size: 1em;
@@ -488,6 +489,7 @@ div>.job-period {
     margin: 0;
   }
 }
+
 /* **********TAKEN********** */
 /* **********PAPER STYLE********** */
 .paper {
