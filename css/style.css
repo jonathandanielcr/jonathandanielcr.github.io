@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  width: fit-content;
   /* font-family: 'Lato', sans-serif; */
   font-family: 'Fira Sans', sans-serif;
   background-color: #fff;
@@ -141,7 +142,7 @@ body {
 
 /*********** Cover ***********/
 #cover {
-  background: url("../images/intro-min.jpg") no-repeat center top;
+  background: url("../images/intro_min.jpg") no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -490,6 +491,130 @@ div>.job-period {
   }
 }
 
+.about-me-grid {
+  /* grid-template-areas: "head head"
+                       "nav  main"
+                       "nav  foot";
+                       grid-template-areas: "ename jobt"
+                         "ename jobp";
+                       */
+  height: 80vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, minmax(100px, 800px));
+  grid-gap: 10px;
+  grid-template-areas:
+    "technology cars astronomy music"
+    "mobile cars swimming tennis"
+    "animals shores simpsons tennis";
+}
+
+@media only screen and (max-width:1281px) {
+  .about-me-grid {
+    /* grid-template-areas: "head head"
+                          "nav  main"
+                          "nav  foot";
+                          grid-template-areas: "ename jobt"
+                            "ename jobp";
+                          */
+    height: 90vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, minmax(100px, 800px));
+    grid-gap: 5px;
+    grid-template-areas:
+      "technology mobile tennis"
+      "animals astronomy tennis"
+      "cars shores swimming"
+      "cars simpsons music";
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .about-me-grid {
+    /* grid-template-areas: "head head"
+                          "nav  main"
+                          "nav  foot";
+                          grid-template-areas: "ename jobt"
+                            "ename jobp";
+                          */
+    height: 600vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, minmax(50px, 500px));
+    grid-gap: 5px;
+    grid-template-areas:
+      "technology"
+      "mobile"
+      "animals"
+      "cars"
+      "cars"
+      "astronomy"
+      "swimming"
+      "tennis"
+      "tennis"
+      "shores"
+      "simpsons"
+      "music";
+  }
+}
+
+#animals {
+  grid-area: animals;
+  background: url(../images/animals_min.jpg) no-repeat center top;
+}
+
+#cars {
+  grid-area: cars;
+  background: url(../images/cars_min.jpg) no-repeat center top;
+}
+
+#astronomy {
+  grid-area: astronomy;
+  background: url(../images/astronomy_min.jpg) no-repeat center top;
+}
+
+#technology {
+  grid-area: technology;
+  background: url(../images/technology_min.jpg) no-repeat center top;
+}
+
+#simpsons {
+  grid-area: simpsons;
+  background: url(../images/simpsons_min.jpg) no-repeat center top;
+}
+
+#bycicle {
+  grid-area: bycicle;
+  background: url(../images/bycicle_min.jpg) no-repeat center top;
+}
+
+#shores {
+  grid-area: shores;
+  background: url(../images/shores_min.jpg) no-repeat center top;
+}
+
+#mobile {
+  grid-area: mobile;
+  background: url(../images/mobile_min.jpg) no-repeat center top;
+}
+
+#tennis {
+  grid-area: tennis;
+  background: url(../images/tennis_min.jpg) no-repeat center top;
+}
+
+#music {
+  grid-area: music;
+  background: url(../images/music_min.jpg) no-repeat center top;
+}
+
+#swimming-pool {
+  grid-area: swimming;
+  background: url(../images/swimming-pool_min.jpg) no-repeat center top;
+}
+
+.images-about-me {
+  background-size: cover !important;
+}
+
 /* **********TAKEN********** */
 /* **********PAPER STYLE********** */
 .paper {
@@ -506,6 +631,9 @@ div>.job-period {
   -moz-background-size: 100% 30px;
   -ms-background-size: 100% 30px;
   background-size: 100% 30px;
+  -webkit-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 .paper::before {
