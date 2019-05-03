@@ -7,7 +7,9 @@
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="./jquery-mosaic-master/jquery.mosaic.js"></script>
+  <link rel="stylesheet" type="text/css" href="./jquery-mosaic-master/jquery.mosaic.css" />
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Jonathan Daniel Cruz-Rabadan</title>
@@ -182,7 +184,7 @@
   </section>
   <section>
     <h3>About Me</h3>
-    <div class="grid-content about-me-grid">
+    <!-- <div class="grid-content about-me-grid">
       <div class="images-about-me" id="animals"></div>
       <div class="images-about-me" id="astronomy"></div>
       <div class="images-about-me" id="cars"></div>
@@ -194,7 +196,121 @@
       <div class="images-about-me" id="music"></div>
       <div class="images-about-me" id="swimming-pool"></div>
 
+    </div> -->
+    <!-- <div id="my-about">
+      <img src="./images/technology_min.jpg" alt="">
+      <img src="./images/mobile_min.jpg" alt="">
+      <img src="./images/animals_min.jpg" alt="">
+      <img src="./images/astronomy_min.jpg" alt="">
+      <img src="./images/shores_min.jpg" alt="">
+      <img src="./images/cars_min.jpg" alt="">
+      <img src="./images/simpsons_min.jpg" alt="">
+      <img src="./images/swimming-pool_min.jpg" alt="">
+      <img src="./images/tennis_min.jpg" data-aspect-ratio="0.67" alt="">
+      <img src="./images/music_min.jpg" data-aspect-ratio="1.49" alt="">
+
+
+
+      <div class="images-about-me" id="animals"></div>
+      <div class="images-about-me" id="astronomy"></div>
+      <div class="images-about-me" id="cars"></div>
+      <div class="images-about-me" id="technology"></div>
+      <div class="images-about-me" id="simpsons"></div>
+      <div class="images-about-me" id="shores"></div>
+      <div class="images-about-me" id="mobile"></div>
+      <div class="images-about-me" id="tennis"></div>
+      <div class="images-about-me" id="music"></div>
+      <div class="images-about-me" id="swimming-pool"></div>
+    </div> -->
+
+    <div id="my-about">
+      <div class="item withImage" data-aspect-ratio="1.32" style="background-image: url('./images/technology_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Technology</h1>
+            <h1>Technology is the reason why I'm an engineer. I think technology must be a way to improve all the world.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="1.32" style="background-image: url('./images/mobile_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Mobile phones and gadgets</h1>
+            <h1>I'm an enthusiastic of Android OS and Nexus and Pixel devices. I've owned a Nexus since 2015, and recently, a Pixel 2.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="1.32" style="background-image: url('./images/astronomy_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Astronomy</h1>
+            <h1>I find Astronomy as the most interesting and fascinating field of science which has taught us the importance of Engineering. For me, it is
+              such an impressive feeling when I watch expeditions like Opportunity rollover walking on Mars. </h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="1.32" style="background-image: url('./images/animals_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Animals</h1>
+            <h1>I believe in Animal Rights, while being emphatetic with them. I'm a vegetarian guy since 2013, and I love it.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="0.67" style="background-image: url('./images/tennis_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Tennis</h1>
+            <h1>Although I'm not used to practice it, Tennis has been my favourite sport for many years. The best player of all times? Roger Federer, for sure.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="0.67" style="background-image: url('./images/cars_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Cars</h1>
+            <h1>There's no best sound than a sport engine car revving, and my favourite engines are from Japan. I'm into Nissan and Honda sport engines.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="1.32" style="background-image: url('./images/swimming-pool_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Swimming</h1>
+            <h1>I practice swimming since I was a child, I'm not a professional though.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="1.32" style="background-image: url('./images/music_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Music</h1>
+            <h1>The best activity to reduce stress, working and having fun. My favourite singer is Paul McCartney, even though I'm a new Damien Rice fan.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="1.32" style="background-image: url('./images/simpsons_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>The Simpsons</h1>
+            <h1>I'm a Simpsons big fan (I know, the latest seasons are not good) since I can understand all the little references to the real life.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="item withImage" data-aspect-ratio="1.32" style="background-image: url('./images/shores_min.jpg');">
+        <div class="overlay">
+          <div class="texts">
+            <h1>Shores</h1>
+            <h1>How about going to the beach? I enjoy driving next to the sea.</h1>
+          </div>
+        </div>
+      </div>
     </div>
+    <script>
+      $('#my-about').Mosaic({
+        maxRowHeight: 600
+      });
+    </script>
   </section>
 
 
