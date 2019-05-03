@@ -162,13 +162,17 @@ body {
 }
 
 .name {
-  /* font-family: 'Raleway', sans-serif; */
   font-family: 'Fira Mono', monospace;
   color: #fff;
   font-size: 3rem;
-  z-index: 11;
   letter-spacing: 15px;
-  /* text-transform: uppercase; */
+  display: table;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  height: 200px;
+  width: 100%;
+  z-index: 20;
 }
 
 .name+p {
@@ -618,7 +622,6 @@ div>.job-period {
 /* #aboutme{
   max-width: 100%;
 } */
-
 /* **********TAKEN********** */
 /* **********PAPER STYLE********** */
 .paper {
