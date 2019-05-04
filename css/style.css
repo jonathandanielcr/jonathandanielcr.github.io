@@ -151,7 +151,7 @@ body {
   height: 100vh;
 }
 
-.overlay {
+.cover-overlay {
   display: block;
   position: absolute;
   top: 0;
