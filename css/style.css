@@ -181,8 +181,8 @@ body {
   }
 }
 
-.name+p {
-  font-size: 1.25em;
+.name p {
+  font-size: .5em;
   color: #fff;
 }
 
