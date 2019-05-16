@@ -250,13 +250,6 @@ h3 {
   color: #053F5E;
 }
 
-#profile {
-  text-transform: uppercase;
-  font-size: 2em;
-  margin-top: 17px;
-  color: #0031ff;
-}
-
 h4 {
   text-align: center;
   text-transform: uppercase;
@@ -279,6 +272,273 @@ h4 {
   max-width: 1300px;
   /* padding: 15px; */
   /* width: 80%; */
+}
+
+/***************************** CV PROFILE */
+body {
+  margin: 0;
+  width: 100%;
+  /* font-family: 'Lato', sans-serif; */
+  font-family: 'Fira Sans', sans-serif;
+  background-color: #fff;
+  z-index: 1;
+}
+
+#instructions {
+  font: 21px 'Fira Mono', sans-serif;
+  margin: 7px;
+  line-height: 30px;
+}
+
+.paper {
+  margin-top: 5px;
+  padding: 37px 8% 27px;
+  position: relative;
+  border: 2px solid #2196f340;
+  border-radius: 10px;
+  background: white;
+  background: -webkit-linear-gradient(top, #2196f34f 0%, white 8%) 0 57px;
+  background: -moz-linear-gradient(top, #2196f34f 0%, white 8%) 0 57px;
+  background: linear-gradient(top, #2196f34f 0%, white 8%) 0 57px;
+  -webkit-background-size: 100% 30px;
+  -moz-background-size: 100% 30px;
+  -ms-background-size: 100% 30px;
+  background-size: 100% 30px;
+  -webkit-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.paper::before {
+  content: "";
+  z-index: -1;
+  margin: 0 1px;
+  width: auto;
+  height: 10px;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  background: white;
+}
+
+.paper::after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  top: 0;
+  left: 7%;
+  bottom: 0;
+  /* border-left: 2px solid #F8D3D3; */
+  border-left: 2px solid #ffc9c9;
+  z-index: 1;
+}
+
+@media only screen and (max-width:600px){
+  #instructions{
+    font-size: 16px;
+
+  }
+  .paper::after{
+    left:4%;
+  }
+}
+
+@media only screen and (max-width:390px){
+  #instructions{
+    font-size:12px;
+  }
+}
+
+.cv-container {
+  display: grid;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #455a64;
+  grid-template:
+    'title title title title title title title'
+    '. generals generals generals generals picture picture'
+    '. education education education education languages languages'
+    '. experience experience experience experience experience experience'
+    '. collaborations collaborations collaborations collaborations collaborations collaborations'
+  ;
+}
+
+@media only screen and (max-width: 1100px) {
+  .cv-container {
+    grid-template: 'title'
+    'picture '
+    'generals '
+      'education '
+      'languages '
+      'experience '
+      'collaborations '
+    ;
+  }
+}
+
+.cv-generals {
+  grid-area: generals;
+  margin: 0;
+  text-decoration: none;
+}
+
+.cv-title {
+  grid-area: title;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  justify-self: center;
+}
+
+#cv ul {
+  margin: 0;
+  line-height: 30px;
+  padding-left: 0;
+}
+
+#cv li {
+  margin: 0;
+  line-height: 30px;
+  list-style: none;
+  display: flex;
+  color: #455a64;
+}
+
+#cv h5 {
+  margin: 30px 0px;
+  line-height: 30px;
+}
+
+.cv-pic {
+  grid-area: picture;
+  justify-self: flex-start;
+  align-self: center;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 1px #21212129;
+  transition: box-shadow 0.5s linear;
+}
+.avatar {
+  width: 280px;
+  margin: auto;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.cv-pic:hover{
+  box-shadow: 1px 0px 25px 0px #05050687;
+  transition: box-shadow 0.25s linear;
+
+}
+
+@media only screen and (max-width:1100px){
+  .cv-pic{
+
+    justify-self: center;
+  }
+  .avatar{
+    width: 224px;
+  }
+}
+
+
+
+#cv i {
+  /* padding: 0 10px; */
+  min-width: 35px;
+  text-align: center;
+  color: #1976d2;
+}
+
+li img {
+  height: 25px;
+  margin-right: 20px;
+  border-radius: 0% 80%;
+  width: 40px;
+}
+
+.cv-education {
+  grid-area: education;
+  margin: 0;
+  text-decoration: none;
+}
+
+.cv-languages {
+  grid-area: languages;
+}
+
+.cv-experience {
+  grid-area: experience;
+}
+
+.cv-experience__grid {
+  display: grid;
+  margin: 0;
+  margin-top: 30px;
+  grid-template: 'enterprise enterprise enterprise period period'
+    'job job job period period'
+  ;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media only screen and (max-width:1100px) {
+  .cv-experience__grid {
+    grid-template: 'enterprise'
+      'period'
+      'job'
+    ;
+    grid-template-columns: 1fr;
+  }
+}
+
+.cv-experience__grid div {
+  display: flex;
+}
+
+.experience-enterprise {
+  grid-area: enterprise;
+  margin: 0;
+  font-weight: bold;
+}
+
+.experience-job {
+  grid-area: job;
+  margin: 0;
+}
+
+.experience-period {
+  grid-area: period;
+  margin: 0;
+}
+
+.cv-collaborations {
+  grid-area: collaborations;
+}
+
+.empty {
+  grid-area: empty;
+}
+
+li strong {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  color: #607d8b;
+  margin-right: 10px;
+}
+
+.cv-container a {
+  color: #455a64;
+  text-decoration: none;
+  transition: color 1s linear;
+  line-height: 30px;
+}
+
+.cv-container a:hover {
+  color: red;
+  /*color: #053f5e;*/
+  transition: color 0.5s linear;
 }
 
 .content-skills {
@@ -328,185 +588,6 @@ h4 {
   font-size: 1em;
   text-align: center;
   margin: 0;
-}
-
-.my-picture {
-  z-index: 10;
-  /* flex-grow: 2; */
-  margin: 0 7.5%;
-  align-self: center;
-  display: grid;
-  border: 2px dashed blue;
-  border-radius: 50%;
-  border: 2px dashed #cecece;
-  width:265px;
-  height:265px;
-  /* width: auto; */
-  /* margin: auto; */
-}
-
-@media only screen and (max-width:1100px) {
-  .my-picture {
-    margin: auto;
-  }
-}
-
-.my-picture img {
-  width: 250px;
-  margin: auto;
-}
-
-.profile-data {
-  /* align-self: auto; */
-  flex-grow: 3;
-  margin: 20px;
-  font-family: 'Fira Mono', sans-serif;
-  font-size: 1.5em;
-  z-index: 5;
-}
-
-@media only screen and (max-width:600px) {
-  .profile-data {
-    /* align-self: auto; */
-    flex-grow: 3;
-    margin: 20px;
-    font-family: 'Fira Mono', sans-serif;
-    font-size: 1em;
-  }
-}
-
-.profile-data a {
-  color: #3f51b5;
-  color: #053f5e;
-  text-decoration: none;
-}
-
-.avatar {
-  /* vertical-align: middle; */
-  /* width: 50px; */
-  /* height: auto; */
-  border: 2px solid #f0f0f0;
-  border-radius: 255px 240px 225px 200px/200px 225px 245px 255px;
-  /* border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; */
-}
-
-.profile-data strong {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  color: #053f5e;
-  color: #3f51b5;
-  margin-right: 10px;
-}
-
-.profile-data li {
-  list-style: none;
-  display: flex;
- align-items: baseline;
- /* flex-wrap: wrap; */
-  /* margin: 0 auto; */
-  /* margin-left: 0; */
-}
-
-.profile-data ul {
-  list-style: none;
-  margin: 0;
-  margin-top: 20px;
-  padding-left: 0;
-}
-
-.education-title {
-  margin: 0;
-  font-size: 1.15em;
-  font-weight: bold;
-}
-
-.title {
-  font-family: 'Fira Mono', sans-serif;
-  font-size: 1.5em;
-  margin-right: 20px;
-}
-
-.school {
-  font-family: 'Fira Sans Extra Condensed', sans-serif;
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-
-.experience-flex {
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.grid-content {
-  display: grid;
-  margin-top: 25px;
-}
-
-.experience-grid {
-  grid-template-areas: "ename jobt"
-    "ename jobp";
-  /* grid-template-areas: "head head"
-                       "nav  main"
-                       "nav  foot"; */
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: auto auto;
-  align-items: center;
-}
-
-div>.enterprise-name {
-  grid-area: ename;
-  /* text-transform: uppercase; */
-  border-right: 4px dotted #000;
-  /* text-align: center; */
-  /* margin: 10px; */
-}
-
-.enterprise-name a {
-  font-family: 'Fira Mono', sans-serif;
-  font-size: 1em;
-}
-
-div>.job-title {
-  grid-area: jobt;
-  font-size: 1em;
-  margin: 0 35px;
-}
-
-div>.job-period {
-  grid-area: jobp;
-  margin: 0 35px;
-}
-
-@media only screen and (max-width: 600px) {
-  .experience-grid {
-    grid-template-areas: "ename"
-      "jobt"
-      "jobp";
-    /* grid-template-areas: "head head"
-                       "nav  main"
-                       "nav  foot"; */
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    align-items: flex-start;
-  }
-
-  div>.enterprise-name {
-    grid-area: ename;
-    border: none;
-    margin: 0;
-  }
-
-  div>.job-title {
-    grid-area: jobt;
-    font-size: 1em;
-    margin: 0;
-  }
-
-  div>.job-period {
-    grid-area: jobp;
-    margin: 0;
-  }
 }
 
 .about-me-grid {
@@ -574,11 +655,6 @@ div>.job-period {
   }
 }
 
-.img-lang{
-  height: 72px;
-  align-self: start;
-}
-
 #animals {
   grid-area: animals;
   background: url(../images/animals_min.jpg) no-repeat center top;
@@ -642,71 +718,13 @@ div>.job-period {
   max-width: 100%;
 } */
 /* **********TAKEN********** */
-/* **********PAPER STYLE********** */
-
-#cv{
+#cv {
   min-height: 80vh;
 }
 
-i{
-  width:30px;
+i {
+  width: 30px;
   text-align: center;
-}
-
-.paper {
-  margin-top: 5px;
-  padding: 37px 8% 27px;
-  position: relative;
-  border: 2px solid #2196f340;
-  border-radius: 10px;
-  background: white;
-  background: -webkit-linear-gradient(top, #2196f34f 0%, white 8%) 0 57px;
-  background: -moz-linear-gradient(top, #2196f34f 0%, white 8%) 0 57px;
-  background: linear-gradient(top, #2196f34f 0%, white 8%) 0 57px;
-  -webkit-background-size: 100% 30px;
-  -moz-background-size: 100% 30px;
-  -ms-background-size: 100% 30px;
-  background-size: 100% 30px;
-  -webkit-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
-}
-@media only screen and (max-width:800px){
-  .paper{
-    padding: 37px 4% 27px;
-    line-height: 1.5em;
-  }
-}
-
-.paper::before {
-  content: "";
-  z-index: 1;
-  margin: 0 1px;
-  width: auto;
-  height: 10px;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  background: white;
-
-}
-
-.paper::after {
-  content: '';
-  position: absolute;
-  width: 0px;
-  top: 0;
-  left: 7%;
-  bottom: 0;
-  /* border-left: 2px solid #F8D3D3; */
-  border-left: 2px solid #ffc9c9;
-  z-index: 1;
-}
-
-@media only screen and (max-width:800px){
-  .paper::after{
-    left: 3%;
-  }
 }
 
 main {
