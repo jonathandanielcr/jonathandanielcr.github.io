@@ -237,7 +237,8 @@ body {
 }
 
 .skills {
-  width: 70%;
+  width: 80%;
+  min-height: 90vh;
   margin: auto;
   /* max-width: 1500px; */
 }
@@ -333,19 +334,19 @@ body {
   z-index: 1;
 }
 
-@media only screen and (max-width:600px){
-  #instructions{
+@media only screen and (max-width:600px) {
+  #instructions {
     font-size: 16px;
-
   }
-  .paper::after{
-    left:4%;
+
+  .paper::after {
+    left: 4%;
   }
 }
 
-@media only screen and (max-width:390px){
-  #instructions{
-    font-size:12px;
+@media only screen and (max-width:390px) {
+  #instructions {
+    font-size: 12px;
   }
 }
 
@@ -366,8 +367,8 @@ body {
 @media only screen and (max-width: 1100px) {
   .cv-container {
     grid-template: 'title'
-    'picture '
-    'generals '
+      'picture '
+      'generals '
       'education '
       'languages '
       'experience '
@@ -419,6 +420,7 @@ body {
   box-shadow: 1px 1px 5px 1px #21212129;
   transition: box-shadow 0.5s linear;
 }
+
 .avatar {
   width: 280px;
   margin: auto;
@@ -426,23 +428,20 @@ body {
   border-radius: 50%;
 }
 
-.cv-pic:hover{
+.cv-pic:hover {
   box-shadow: 1px 0px 25px 0px #05050687;
   transition: box-shadow 0.25s linear;
-
 }
 
-@media only screen and (max-width:1100px){
-  .cv-pic{
-
+@media only screen and (max-width:1100px) {
+  .cv-pic {
     justify-self: center;
   }
-  .avatar{
+
+  .avatar {
     width: 224px;
   }
 }
-
-
 
 #cv i {
   /* padding: 0 10px; */
@@ -562,6 +561,7 @@ li strong {
   margin: 15px;
   /* align-items: center; */
   justify-content: center;
+  /* color: #fff; */
 }
 
 @media only screen and (max-width:600px) {
@@ -742,4 +742,96 @@ aside {
 
 footer {
   grid-column: 1 / 13;
+}
+
+/* **************CARDS***************** */
+.container {
+  position: relative;
+
+  width: auto;
+  top: 60px;
+  /* left: calc(50% - 300px); */
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  display: flex;
+  height: 250px;
+  width: 175px;
+  background-color: #17141d;
+  background-color: #424242;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #000;
+
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+  color:#f5f5f5;
+  margin:15px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  color:#37474F;
+  background-color: #fff;
+  box-shadow: 0rem 0 1rem #000;
+  transition: 0.4s ease-out;
+}
+
+/* .card:hover~.card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+
+} */
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 00%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 5px;
+  height: 100%;
+  background: rgb(0, 154, 217);
+  background: linear-gradient(90deg, #FF5722 0%, #FFEB3B 10%, #009688 50%, #009688 95%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+[experience=low]{
+
 }
