@@ -238,9 +238,7 @@ body {
 
 .skills {
   width: 80%;
-  min-height: 90vh;
-  margin: auto;
-  /* max-width: 1500px; */
+  margin: 15% auto;
 }
 
 h3 {
@@ -720,10 +718,9 @@ li strong {
   max-width: 100%;
 } */
 /* **********TAKEN********** */
-#cv {
+/* #cv {
   min-height: 80vh;
-}
-
+} */
 i {
   width: 30px;
   text-align: center;
@@ -747,37 +744,39 @@ footer {
 /* **************CARDS***************** */
 .container {
   position: relative;
-
   width: auto;
   top: 60px;
   /* left: calc(50% - 300px); */
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
+  background-color: #ffffff;
+  margin-bottom: 100px;
 }
 
 .card {
   display: flex;
-  height: 250px;
-  width: 175px;
+  height: 290px;
+  width: 200px;
   background-color: #17141d;
-  background-color: #424242;
-  border-radius: 10px;
-  box-shadow: 1px 1px 3px #000;
-
+  background-color: #ffffff;
+  border-radius: 5px;
+  /* box-shadow: 1px 1px 3px #000; */
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
-  color:#f5f5f5;
-  margin:15px;
+  color: #424242;
+  margin: 0px;
+  margin-left: -10px;
 }
 
 .card:hover {
-  transform: translateY(-20px);
-  color:#37474F;
+  transform: translateY(-40px);
+  color: #37474F;
   background-color: #fff;
   box-shadow: 0rem 0 1rem #000;
   transition: 0.4s ease-out;
+  z-index: 20;
 }
 
 /* .card:hover~.card {
@@ -786,7 +785,6 @@ footer {
   transition: 0.4s ease-out;
 
 } */
-
 .title {
   color: white;
   font-weight: 300;
@@ -832,6 +830,4 @@ footer {
   transition: 0.6s ease-out;
 }
 
-[experience=low]{
-
-}
+[experience=low] {}
