@@ -878,3 +878,8 @@ footer{
   text-align: center;
   min-height: 20vh;
 }
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
