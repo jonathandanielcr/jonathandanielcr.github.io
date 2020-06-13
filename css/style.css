@@ -306,8 +306,8 @@ body {
   border: 2px solid #2196f340;
   border-radius: 10px;
   background: white;
-  background: -webkit-linear-gradient(top, #d8edff 0%, white 8%) 0 57px;
-  background: -moz-linear-gradient(top, #2196f34f 0%, white 8%) 0 57px;
+  background: -webkit-linear-gradient(top, #eeeeee 0%, white 8%) 0 57px;
+  background: -moz-linear-gradient(top, #eeeeee 0%, white 8%) 0 57px;
   background: linear-gradient(top, #2196f34f 0%, white 8%) 0 57px;
   -webkit-background-size: 100% 30px;
   -moz-background-size: 100% 30px;
@@ -316,6 +316,7 @@ body {
   -webkit-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+  transition: 150ms linear all;
 }
 
 .paper::before {
@@ -340,6 +341,11 @@ body {
   /* border-left: 2px solid #F8D3D3; */
   border-left: 2px solid #ffc9c9;
   z-index: 1;
+}
+
+.paper:hover{
+  transform: scale(1.02);
+  transition: 150ms linear all;
 }
 
 @media only screen and (max-width:600px) {
@@ -440,10 +446,10 @@ body {
   grid-area: picture;
   justify-self: flex-start;
   align-self: center;
-  border: 8px solid #fff;
+  border: 4px solid #fff;
   border-radius: 50%;
   box-shadow: 1px 1px 5px 1px #21212129;
-  transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.2s linear;
 }
 
 .avatar {
@@ -454,8 +460,8 @@ body {
 }
 
 .cv-pic:hover {
-  box-shadow: 1px 0px 25px 0px #05050687;
-  transition: box-shadow 0.25s linear;
+  box-shadow: 1px 1px 6px 0px #05050687;
+  transition: box-shadow 0.2s linear;
 }
 
 @media only screen and (max-width:1100px) {
@@ -472,7 +478,7 @@ body {
   min-width: 35px;
   line-height: 30px;
   text-align: center;
-  color: #607D8B;
+  color: #1e88e5;
   font-size: 20px;
 }
 
@@ -556,14 +562,14 @@ li strong {
 .cv-container a {
   color: #455a64;
   text-decoration: none;
-  transition: color 1s linear;
+  transition: color 0.15s linear;
   line-height: 30px;
 }
 
 .cv-container a:hover {
-  color: red;
+  color: #1e88e5;
   /*color: #053f5e;*/
-  transition: color 0.5s linear;
+  transition: color 0.15s linear;
 }
 
 .content-skills {
@@ -882,4 +888,15 @@ footer{
 a.disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.item.withImage:hover{
+  transform: scale(1.07) !important;
+  transition: 0.3s ease-out;
+}
+
+.item.withImage:hover{
+  
+  transition: 0.3s ease-out;
+
 }
